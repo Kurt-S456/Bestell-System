@@ -49,8 +49,8 @@ namespace OrderSystem.Controllers
         // GET: AdminPersons/Create
         public IActionResult Create()
         {
-            ViewData["RoRoleId"] = new SelectList(_context.RoRoles, "RoId", "RoId");
-            ViewData["UsrUserId"] = new SelectList(_context.UsrUsers, "UsrId", "UsrPassword");
+            ViewData["RoRoleId"] = new SelectList(_context.RoRoles, "RoId", "RoName");
+            ViewData["UsrUserId"] = new SelectList(_context.UsrUsers, "UsrId", "UsrName");
             return View();
         }
 
@@ -68,8 +68,8 @@ namespace OrderSystem.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RoRoleId"] = new SelectList(_context.RoRoles, "RoId", "RoId", perPerson.RoRoleId);
-            ViewData["UsrUserId"] = new SelectList(_context.UsrUsers, "UsrId", "UsrPassword", perPerson.UsrUserId);
+            ViewData["RoRoleId"] = new SelectList(_context.RoRoles, "RoId", "RoName", perPerson.RoRoleId);
+            ViewData["UsrUserId"] = new SelectList(_context.UsrUsers, "UsrId", "UsrName", perPerson.UsrUserId);
             return View(perPerson);
         }
 
@@ -86,8 +86,8 @@ namespace OrderSystem.Controllers
             {
                 return NotFound();
             }
-            ViewData["RoRoleId"] = new SelectList(_context.RoRoles, "RoId", "RoId", perPerson.RoRoleId);
-            ViewData["UsrUserId"] = new SelectList(_context.UsrUsers, "UsrId", "UsrPassword", perPerson.UsrUserId);
+            ViewData["RoRoleId"] = new SelectList(_context.RoRoles, "RoId", "RoName", perPerson.RoRoleId);
+            ViewData["UsrUserId"] = new SelectList(_context.UsrUsers, "UsrId", "UsrName", perPerson.UsrUserId);
             return View(perPerson);
         }
 
@@ -123,8 +123,8 @@ namespace OrderSystem.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RoRoleId"] = new SelectList(_context.RoRoles, "RoId", "RoId", perPerson.RoRoleId);
-            ViewData["UsrUserId"] = new SelectList(_context.UsrUsers, "UsrId", "UsrPassword", perPerson.UsrUserId);
+            ViewData["RoRoleId"] = new SelectList(_context.RoRoles, "RoId", "RoName", perPerson.RoRoleId);
+            ViewData["UsrUserId"] = new SelectList(_context.UsrUsers, "UsrId", "UsrName", perPerson.UsrUserId);
             return View(perPerson);
         }
 

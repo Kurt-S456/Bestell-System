@@ -15,6 +15,7 @@ namespace OrderSystem.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
 

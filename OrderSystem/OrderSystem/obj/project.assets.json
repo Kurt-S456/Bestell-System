@@ -9466,19 +9466,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kurtf\\.nuget\\packages\\": {}
+    "C:\\Users\\kurtf\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kurtf\\source\\repos\\OrderSystem\\OrderSystem\\OrderSystem.csproj",
+      "projectUniqueName": "C:\\Users\\kurtf\\source\\repos\\Bestell-System\\OrderSystem\\OrderSystem\\OrderSystem.csproj",
       "projectName": "OrderSystem",
-      "projectPath": "C:\\Users\\kurtf\\source\\repos\\OrderSystem\\OrderSystem\\OrderSystem.csproj",
+      "projectPath": "C:\\Users\\kurtf\\source\\repos\\Bestell-System\\OrderSystem\\OrderSystem\\OrderSystem.csproj",
       "packagesPath": "C:\\Users\\kurtf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kurtf\\source\\repos\\OrderSystem\\OrderSystem\\obj\\",
+      "outputPath": "C:\\Users\\kurtf\\source\\repos\\Bestell-System\\OrderSystem\\OrderSystem\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\kurtf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

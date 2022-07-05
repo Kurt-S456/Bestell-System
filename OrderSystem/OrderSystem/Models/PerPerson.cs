@@ -16,10 +16,10 @@ namespace OrderSystem.Models
 
         [Key]
         public Guid PerId { get; set; }
-        [Required]
+
         [Display(Name = "Vorname")]
         public string? PerFirstName { get; set; }
-        [Required]
+
         [Display(Name = "Nachname")]
         public string? PerLastName { get; set; }
 
@@ -43,12 +43,12 @@ namespace OrderSystem.Models
         
         public Guid UsrUserId { get; set; }
         [Display(Name = "Benutzer")]
-        public UsrUser UsrUser { get; set; } = null!;
+        public UsrUser? UsrUser { get; set; }
 
         [Required]
         public Guid RoRoleId { get; set; }
 
-        [Display(Name = "Rolle")]
-        public RoRole RoRole { get; set; } = null!;
+        [Display(Name = "Funktion")]
+        public RoRole? RoRole { get; set; }
     }
 }

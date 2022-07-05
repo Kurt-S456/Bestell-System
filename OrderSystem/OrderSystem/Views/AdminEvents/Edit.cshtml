@@ -28,6 +28,10 @@
                 <input asp-for="EveEndDate" class="form-control" />
                 <span asp-validation-for="EveEndDate" class="text-danger"></span>
             </div>
+             <div class="form-group">
+                 <label asp-for="StaStations" class="control-label"></label>
+                <a href="@Url.Action("Create","AdminStations")" class="btn btn-success">Hinzufügen</a>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

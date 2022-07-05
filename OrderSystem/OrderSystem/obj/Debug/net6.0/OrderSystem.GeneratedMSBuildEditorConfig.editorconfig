@@ -8,81 +8,121 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OrderSystem
 build_property.RootNamespace = OrderSystem
-build_property.ProjectDir = C:\Users\kurtf\source\repos\OrderSystem\OrderSystem\
+build_property.ProjectDir = C:\Users\kurtf\source\repos\Bestell-System\OrderSystem\OrderSystem\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\kurtf\source\repos\OrderSystem\OrderSystem
+build_property.MSBuildProjectDirectory = C:\Users\kurtf\source\repos\Bestell-System\OrderSystem\OrderSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminEvents/Create.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminEvents/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FdmVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminEvents/Delete.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminEvents/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FdmVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminEvents/Details.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminEvents/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FdmVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminEvents/Edit.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminEvents/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FdmVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminEvents/Index.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminEvents/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FdmVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminPersons/Create.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminPersons/Delete.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminPersons/Details.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminPersons/Edit.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/AdminPersons/Index.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/Home/Index.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminProducts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminProducts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminProducts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminProducts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminProducts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminStations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdGF0aW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminStations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdGF0aW9uc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminStations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdGF0aW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminStations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdGF0aW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminStations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdGF0aW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/Home/Privacy.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/Shared/Error.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/Staff/Login.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/Staff/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/_ViewImports.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/_ViewStart.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/OrderSystem/OrderSystem/Views/Shared/_Layout.cshtml]
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2vfqknbmnn

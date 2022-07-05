@@ -22,6 +22,6 @@ namespace OrderSystem.Models
 
         public Guid PerPersonId { get; set; }
         [Display(Name = "Personal-Info")]
-        public PerPerson PerPerson { get; set; } = null!;
+        public PerPerson? PerPerson { get; set; }
     }
 }

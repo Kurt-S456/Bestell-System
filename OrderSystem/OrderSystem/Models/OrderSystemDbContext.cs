@@ -27,10 +27,10 @@ namespace OrderSystem
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UsrUser>()
-                .HasOne(u => u.PerPerson)
-                .WithOne(p => p.UsrUser)
-                .HasForeignKey<PerPerson>(p => p.UsrUserId);
+            modelBuilder.Entity<PerPerson>()
+                .HasOne(p => p.UsrUser)
+                .WithOne(u => u.PerPerson)
+                .HasForeignKey<UsrUser>(u => u.UsrId).IsRequired(false);
             modelBuilder.Entity<ProOrd>()
                 .HasKey(po => new { po.ProId, po.OrdId });
             modelBuilder.Entity<ProOrd>()

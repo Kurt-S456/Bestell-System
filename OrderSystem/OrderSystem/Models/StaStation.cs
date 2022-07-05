@@ -21,7 +21,7 @@ namespace OrderSystem.Models
         [Display(Name = "Veranstalltung")]
         public Guid StaEveId { get; set; }
         [Display(Name = "Veranstalltung")]
-        public EveEvent StaEve { get; set; } = null!;
+        public EveEvent? StaEve { get; set; }
         [Display(Name = "Schichten")]
         public ICollection<ShiShift> ShiShifts { get; set; }
         [Display(Name = "Menu")]

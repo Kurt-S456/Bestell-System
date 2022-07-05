@@ -105,11 +105,9 @@ namespace OrderSystem.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PerFirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PerLastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("RoRoleId")
@@ -121,9 +119,6 @@ namespace OrderSystem.Migrations
                     b.HasKey("PerId");
 
                     b.HasIndex("RoRoleId");
-
-                    b.HasIndex("UsrUserId")
-                        .IsUnique();
 
                     b.ToTable("PerPersons");
                 });
@@ -252,7 +247,6 @@ namespace OrderSystem.Migrations
             modelBuilder.Entity("OrderSystem.Models.UsrUser", b =>
                 {
                     b.Property<Guid>("UsrId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("PerPersonId")
@@ -322,15 +316,7 @@ namespace OrderSystem.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OrderSystem.Models.UsrUser", "UsrUser")
-                        .WithOne("PerPerson")
-                        .HasForeignKey("OrderSystem.Models.PerPerson", "UsrUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("RoRole");
-
-                    b.Navigation("UsrUser");
                 });
 
             modelBuilder.Entity("OrderSystem.Models.ProOrd", b =>
@@ -383,6 +369,12 @@ namespace OrderSystem.Migrations
                     b.HasOne("OrderSystem.Models.ShiShift", null)
                         .WithMany("UsrUsers")
                         .HasForeignKey("ShiShiftShiId");
+
+                    b.HasOne("OrderSystem.Models.PerPerson", "PerPerson")
+                        .WithOne("UsrUser")
+                        .HasForeignKey("OrderSystem.Models.UsrUser", "UsrId");
+
+                    b.Navigation("PerPerson");
                 });
 
             modelBuilder.Entity("ProProductStaStation", b =>
@@ -415,6 +407,8 @@ namespace OrderSystem.Migrations
                     b.Navigation("OrdOrders");
 
                     b.Navigation("ShiShifts");
+
+                    b.Navigation("UsrUser");
                 });
 
             modelBuilder.Entity("OrderSystem.Models.ProProduct", b =>
@@ -435,12 +429,6 @@ namespace OrderSystem.Migrations
             modelBuilder.Entity("OrderSystem.Models.StaStation", b =>
                 {
                     b.Navigation("ShiShifts");
-                });
-
-            modelBuilder.Entity("OrderSystem.Models.UsrUser", b =>
-                {
-                    b.Navigation("PerPerson")
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Personal</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a href="@Url.Action("Create","AdminPersons")" class="btn btn-success">Hinzufügen</a>
 </p>
 <table class="table">
     <thead>
@@ -43,10 +43,10 @@
                 @Html.DisplayFor(modelItem => item.PerCode)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UsrUser.UsrPassword)
+                @Html.DisplayFor(modelItem => item.UsrUser.UsrUserName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RoRole.RoId)
+                @Html.DisplayFor(modelItem => item.RoRole.RoName)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PerId">Edit</a> |

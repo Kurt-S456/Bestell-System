@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OrderSystem.Models;
+using System.Security.Claims;
 
 namespace OrderSystem.Controllers
 {
@@ -26,9 +28,16 @@ namespace OrderSystem.Controllers
 
             if (_context.PerPersons.Any(p => p.PerCode == code))
             {
+
                 PerPerson perPerson = await _context.PerPersons.SingleAsync(p => p.PerCode == code);
+                var claims = new List<Claim>();
+                claims.Add(new Claim(ClaimTypes.NameIdentifier, perPerson.PerCode));
                 if (!string.IsNullOrEmpty(perPerson.PerLastName) && !string.IsNullOrEmpty(perPerson.PerFirstName))
                 {
+                    claims.Add(new Claim(ClaimTypes.Name, perPerson.FullName));
+                    var identity = new  ClaimsIdentity(claims);
+                    ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+                    await HttpContext.SignInAsync(null, claimsPrincipal);    
                     return RedirectToAction("Order");
                 }
                 else if (string.IsNullOrEmpty(perPerson.PerLastName) || string.IsNullOrEmpty(perPerson.PerFirstName))

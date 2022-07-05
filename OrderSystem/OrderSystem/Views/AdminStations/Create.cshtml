@@ -1,0 +1,39 @@
+﻿@model OrderSystem.Models.StaStation
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>StaStation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StaName" class="control-label"></label>
+                <input asp-for="StaName" class="form-control" />
+                <span asp-validation-for="StaName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StaDescription" class="control-label"></label>
+                <input asp-for="StaDescription" class="form-control" />
+                <span asp-validation-for="StaDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StaEveId" class="control-label"></label>
+                <select asp-for="StaEveId" class ="form-control" asp-items="ViewBag.StaEveId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

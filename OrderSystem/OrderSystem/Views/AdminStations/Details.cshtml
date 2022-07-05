@@ -1,0 +1,36 @@
+﻿@model OrderSystem.Models.StaStation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>StaStation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StaName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StaName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StaDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StaDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StaEve)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StaEve.EveId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.StaId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

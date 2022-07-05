@@ -24,7 +24,7 @@ namespace OrderSystem.Models
         
         public Guid ShiStaId { get; set; }
         [Display(Name = "Station")]
-        public StaStation ShiSta { get; set; } = null!;
+        public StaStation? ShiSta { get; set; }
         [Display(Name = "Personal")]
         public ICollection<UsrUser> UsrUsers { get; set; }
     }
