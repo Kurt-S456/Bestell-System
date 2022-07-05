@@ -1,0 +1,47 @@
+﻿@model IEnumerable<OrderSystem.Models.EveEvent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Veranstaltungen</h1>
+
+<p>
+    <a href="@Url.Action("Create","AdminEvents")" class="btn btn-success">Hinzufügen</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EveName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EveStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EveEndDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EveName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EveStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EveEndDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EveId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EveId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EveId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

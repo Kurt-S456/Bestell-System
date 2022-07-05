@@ -1,0 +1,41 @@
+﻿@model OrderSystem.Models.EveEvent
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>EveEvent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EveId" />
+            <div class="form-group">
+                <label asp-for="EveName" class="control-label"></label>
+                <input asp-for="EveName" class="form-control" />
+                <span asp-validation-for="EveName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EveStartDate" class="control-label"></label>
+                <input asp-for="EveStartDate" class="form-control" />
+                <span asp-validation-for="EveStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EveEndDate" class="control-label"></label>
+                <input asp-for="EveEndDate" class="form-control" />
+                <span asp-validation-for="EveEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
