@@ -35,26 +35,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5FdmVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminPersons/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QZXJzb25zXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/AdminProducts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -109,6 +89,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/StaffOrder/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZPcmRlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/StaffOrder/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZPcmRlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/StaffOrder/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZPcmRlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/StaffOrder/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZPcmRlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/StaffOrder/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZPcmRlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kurtf/source/repos/Bestell-System/OrderSystem/OrderSystem/Views/Staff/Login.cshtml]

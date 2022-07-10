@@ -9,7 +9,8 @@ namespace OrderSystem.Models
     {
         public ShiShift()
         {
-            UsrUsers = new HashSet<UsrUser>();
+            Staff = new HashSet<PerShi>();
+            Orders = new HashSet<OrdOrder>();
         }
         [Key]
         public Guid ShiId { get; set; }
@@ -26,6 +27,8 @@ namespace OrderSystem.Models
         [Display(Name = "Station")]
         public StaStation? ShiSta { get; set; }
         [Display(Name = "Personal")]
-        public ICollection<UsrUser> UsrUsers { get; set; }
+        public ICollection<PerShi> Staff { get; set; }
+        [Display(Name = "Bestellungen")]
+        public ICollection<OrdOrder> Orders { get; set; }
     }
 }

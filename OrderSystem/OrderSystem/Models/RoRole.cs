@@ -9,14 +9,14 @@ namespace OrderSystem.Models
     {
         public RoRole()
         {
-            PerPersons = new HashSet<PerPerson>();
+            Persons = new HashSet<PerShi>();
         }
         [Key]
         public Guid RoId { get; set; }
         [Display(Name = "Bezeichnung")]
         public string RoName { get; set; } = null!;
         [Display(Name = "Benutzer")]
-        public ICollection<PerPerson> PerPersons { get; set; }
+        public ICollection<PerShi> Persons { get; set; }
         [Display(Name = "Admin")]
         public bool isAdmin { get; set; }
         [Display(Name = "Personal")]

@@ -27,10 +27,6 @@ namespace OrderSystem
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PerPerson>()
-                .HasOne(p => p.UsrUser)
-                .WithOne(u => u.PerPerson)
-                .HasForeignKey<UsrUser>(u => u.UsrId).IsRequired(false);
             modelBuilder.Entity<ProOrd>()
                 .HasKey(po => new { po.ProId, po.OrdId });
             modelBuilder.Entity<ProOrd>()
@@ -42,6 +38,16 @@ namespace OrderSystem
                 .WithMany(po => po.OrdOrders)
                 .HasForeignKey(po => po.ProId);
 
+            modelBuilder.Entity<PerShi>()
+                .HasKey(ps => new { ps.PerId, ps.ShiId });
+            modelBuilder.Entity<PerShi>()
+                .HasOne(ps => ps.Person)
+                .WithMany(ps => ps.Shifts)
+                .HasForeignKey(ps => ps.ShiId);
+            modelBuilder.Entity<PerShi>()
+                .HasOne(ps => ps.Shift)
+                .WithMany(ps => ps.Staff)
+                .HasForeignKey(ps => ps.PerId);
         }
         public override int SaveChanges()
         {

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OrderSystem;
 
@@ -11,9 +12,10 @@ using OrderSystem;
 namespace OrderSystem.Migrations
 {
     [DbContext(typeof(OrderSystemDbContext))]
-    partial class OrderSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220710195310_AddedShiftRelation")]
+    partial class AddedShiftRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,12 +125,15 @@ namespace OrderSystem.Migrations
                     b.Property<Guid>("ShiId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("RoleId")
+                    b.Property<Guid>("RoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("RoleRoId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("PerId", "ShiId");
 
-                    b.HasIndex("RoleId");
+                    b.HasIndex("RoleRoId");
 
                     b.HasIndex("ShiId");
 
@@ -322,9 +327,7 @@ namespace OrderSystem.Migrations
 
                     b.HasOne("OrderSystem.Models.RoRole", "Role")
                         .WithMany("Persons")
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RoleRoId");
 
                     b.HasOne("OrderSystem.Models.PerPerson", "Person")
                         .WithMany("Shifts")

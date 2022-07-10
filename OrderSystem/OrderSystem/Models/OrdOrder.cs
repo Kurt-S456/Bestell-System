@@ -20,7 +20,10 @@ namespace OrderSystem.Models
         [Display(Name = "Produkte")]
         public ICollection<ProOrd> ProProducts { get; set; }
         [Display(Name = "Benutzer")]
-        public UsrUser UsrUser { get; set; } = null!;
+        public PerPerson Person { get; set; } = null!;
+        public Guid ShiftId  { get; set; }
+        [Display(Name = "Schicht")]
+        public ShiShift Shift { get; set; } = null!;
         [Display(Name = "Status")]
         public OStOrderStatus OStStatus { get; set; } = null!;
     }

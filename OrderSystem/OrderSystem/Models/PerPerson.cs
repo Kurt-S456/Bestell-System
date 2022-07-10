@@ -10,8 +10,8 @@ namespace OrderSystem.Models
     {
         public PerPerson()
         {
-            OrdOrders = new HashSet<OrdOrder>();
-            ShiShifts = new HashSet<ShiShift>();
+            Orders = new HashSet<OrdOrder>();
+            Shifts = new HashSet<PerShi>();
         }
 
         [Key]
@@ -35,20 +35,9 @@ namespace OrderSystem.Models
         [Required]
         [Display(Name = "Code")]
         public string PerCode { get; set; } = null!;
-        public virtual ICollection<ShiShift> ShiShifts { get; set; }
+        public virtual ICollection<PerShi> Shifts { get; set; }
 
         [Display(Name = "Bestellungen")]
-        public virtual ICollection<OrdOrder> OrdOrders { get; set; }
-
-        
-        public Guid UsrUserId { get; set; }
-        [Display(Name = "Benutzer")]
-        public UsrUser? UsrUser { get; set; }
-
-        [Required]
-        public Guid RoRoleId { get; set; }
-
-        [Display(Name = "Funktion")]
-        public RoRole? RoRole { get; set; }
+        public virtual ICollection<OrdOrder> Orders { get; set; }
     }
 }

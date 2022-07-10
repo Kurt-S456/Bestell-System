@@ -20,8 +20,5 @@ namespace OrderSystem.Models
         [Display(Name = "Passwort")]
         public string UsrPassword { get; set; } = null!;
 
-        public Guid PerPersonId { get; set; }
-        [Display(Name = "Personal-Info")]
-        public PerPerson? PerPerson { get; set; }
     }
 }
