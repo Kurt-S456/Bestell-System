@@ -30,7 +30,11 @@
             </div>
              <div class="form-group">
                  <label asp-for="StaStations" class="control-label"></label>
-                <a href="@Url.Action("Create","AdminStations")" class="btn btn-success">Hinzufügen</a>
+                 @foreach (var station in Model.StaStations)
+                 {
+                      <a href="@Url.Action("Edit","AdminStations", new {id = station.StaId})">@station.StaName</a><br/>
+                 }
+                 <a href="@Url.Action("Create","AdminStations")" class="btn btn-success">Hinzufügen</a>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

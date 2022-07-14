@@ -29,6 +29,10 @@
                 <span asp-validation-for="StaEveId" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ProProducts" class="control-label"></label>
+                <div>@Html.DisplayFor(model => model.ProProducts)</div>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

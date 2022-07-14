@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OrderSystem;
 using OrderSystem.Models;
-
+//https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/update-related-data?view=aspnetcore-6.0
 namespace OrderSystem.Controllers
 {
     public class AdminStationsController : Controller
@@ -36,6 +36,9 @@ namespace OrderSystem.Controllers
 
             var staStation = await _context.StaStations
                 .Include(s => s.StaEve)
+                .Include(s => s.ProProducts)
+                .Include(s => s.ShiShifts)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.StaId == id);
             if (staStation == null)
             {
@@ -48,7 +51,8 @@ namespace OrderSystem.Controllers
         // GET: AdminStations/Create
         public IActionResult Create()
         {
-            ViewData["StaEveId"] = new SelectList(_context.EveEvents, "EveId", "EveId");
+            PopulateProductDropDownList();
+            ViewData["StaEveId"] = new SelectList(_context.EveEvents, "EveId", "EveName");
             return View();
         }
 
@@ -57,7 +61,7 @@ namespace OrderSystem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StaId,StaName,StaDescription,StaEveId")] StaStation staStation)
+        public async Task<IActionResult> Create([Bind("StaId,StaName,StaDescription,StaEveId,ProProducts")] StaStation staStation)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +70,7 @@ namespace OrderSystem.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["StaEveId"] = new SelectList(_context.EveEvents, "EveId", "EveId", staStation.StaEveId);
+            ViewData["StaEveId"] = new SelectList(_context.EveEvents, "EveId", "EveName", staStation.StaEveId);
             return View(staStation);
         }
 
@@ -78,12 +82,13 @@ namespace OrderSystem.Controllers
                 return NotFound();
             }
 
-            var staStation = await _context.StaStations.FindAsync(id);
+            var staStation = await _context.StaStations.Include(s => s.ProProducts).FirstAsync(s => s.StaId == id);
             if (staStation == null)
             {
                 return NotFound();
             }
-            ViewData["StaEveId"] = new SelectList(_context.EveEvents, "EveId", "EveId", staStation.StaEveId);
+            ViewData["StaEveId"] = new SelectList(_context.EveEvents, "EveId", "EveName", staStation.StaEveId);
+            PopulateProductDropDownList(staStation.ProProducts);
             return View(staStation);
         }
 
@@ -119,7 +124,7 @@ namespace OrderSystem.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["StaEveId"] = new SelectList(_context.EveEvents, "EveId", "EveId", staStation.StaEveId);
+            ViewData["StaEveId"] = new SelectList(_context.EveEvents, "EveId", "EveName", staStation.StaEveId);
             return View(staStation);
         }
 
@@ -133,6 +138,7 @@ namespace OrderSystem.Controllers
 
             var staStation = await _context.StaStations
                 .Include(s => s.StaEve)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.StaId == id);
             if (staStation == null)
             {
@@ -164,6 +170,13 @@ namespace OrderSystem.Controllers
         private bool StaStationExists(Guid id)
         {
           return (_context.StaStations?.Any(e => e.StaId == id)).GetValueOrDefault();
+        }
+        public void PopulateProductDropDownList(object selectedProduct = null)
+        {
+            var productQuery = from p in _context.ProProducts
+                                   orderby p.ProName
+                                   select p;
+            ViewBag.ProProducts = new SelectList(productQuery.AsNoTracking(), "ProId", "ProName", selectedProduct);
         }
     }
 }

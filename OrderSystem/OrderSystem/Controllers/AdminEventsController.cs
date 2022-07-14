@@ -36,6 +36,7 @@ namespace OrderSystem.Controllers
             }
 
             var eveEvent = await _context.EveEvents
+                .Include(e => e.StaStations)
                 .FirstOrDefaultAsync(m => m.EveId == id);
             if (eveEvent == null)
             {
@@ -76,7 +77,7 @@ namespace OrderSystem.Controllers
                 return NotFound();
             }
 
-            var eveEvent = await _context.EveEvents.FindAsync(id);
+            var eveEvent = await _context.EveEvents.Include(e => e.StaStations).FirstAsync(e => e.EveId == id);
             if (eveEvent == null)
             {
                 return NotFound();
@@ -89,7 +90,7 @@ namespace OrderSystem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("EveId,EveName,EveStartDate,EveEndDate")] EveEvent eveEvent)
+        public async Task<IActionResult> Edit(Guid id, [Bind("EveId,EveName,EveStartDate,EveEndDate,StaStations")] EveEvent eveEvent)
         {
             if (id != eveEvent.EveId)
             {
@@ -118,7 +119,22 @@ namespace OrderSystem.Controllers
             }
             return View(eveEvent);
         }
-
+        public async Task<IActionResult> RemoveStaion(Guid eveId ,Guid staId)
+        {
+            if (_context.StaStations.Find(staId) == null || _context.EveEvents.Find(eveId) == null)
+            {
+                return NotFound();
+            }
+            var eveEvent = _context.EveEvents.Include(e => e.StaStations).First(e => e.EveId == eveId);
+            var sta = _context.StaStations.Find(staId);
+            if (eveEvent.StaStations.Contains(sta))
+            {
+                eveEvent.StaStations.Remove(sta);
+            }
+            _context.Update(eveEvent);
+            _context.SaveChanges();
+            return RedirectToAction("Details",new {id = eveId});
+        }
         // GET: AdminEvents/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {

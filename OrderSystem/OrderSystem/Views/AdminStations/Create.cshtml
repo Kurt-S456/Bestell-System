@@ -27,6 +27,12 @@
                 <select asp-for="StaEveId" class ="form-control" asp-items="ViewBag.StaEveId"></select>
             </div>
             <div class="form-group">
+                <label asp-for="ProProducts" class="control-label"></label>
+                <select asp-for="ProProducts" class ="form-control" asp-items="ViewBag.ProProducts">
+                    <option value="">-- Menü auswählen --</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

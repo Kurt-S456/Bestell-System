@@ -14,5 +14,7 @@ namespace OrderSystem.Models
         public string OStColor { get; set; } = null!;
         [Display(Name = "Abgeschlossen")]
         public bool OStIsComplete { get; set; }
+        [Display(Name = "Bar")]
+        public bool OStIsCash { get; set; }
     }
 }

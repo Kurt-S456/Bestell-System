@@ -26,7 +26,29 @@
             @Html.DisplayNameFor(model => model.StaEve)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.StaEve.EveId)
+            @Html.DisplayFor(model => model.StaEve.EveName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProProducts)
+        </dt>
+        <dd class = "col-sm-10">
+           <table class="table">
+        <tr>
+            <th>Produkt</th>
+            <th>Preis</th>
+        </tr>
+        @foreach (var item in Model.ProProducts)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProPrice)
+                </td>
+            </tr>
+        }
+    </table>
         </dd>
     </dl>
 </div>

@@ -31,13 +31,15 @@
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.StaStations)
         </dt>
-        <dd class = "col-sm-10">
+         <dd class = "col-sm-10">
             @foreach (var station in Model.StaStations)
             {
-                <p>@station.StaName</p>
+                <a href="@Url.Action("Details","AdminStations", new {id = station.StaId})">@station.StaName</a><br/>
+             
             }
-            
-        </dd>
+         </dd>
+         
+       
     </dl>
 </div>
 <div>
